@@ -15,7 +15,8 @@ export const ContextProvider = ({ children }) => {
   return (
     <StateContext.Provider
       value={{ 
-        activeMenu // if k/v pair has same name: don't need activeMenu: activeMenu
+        activeMenu, // if k/v pair has same name: don't need activeMenu: activeMenu
+        setActiveMenu
       }}
     >
       {children}
