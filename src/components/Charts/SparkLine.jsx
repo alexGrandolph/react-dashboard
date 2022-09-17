@@ -21,9 +21,9 @@ const SparkLine = ({ id, height, width, color, data, type, currentColor}) => {
       }}
       markerSettings={{ visible: ['All'], size: 2.5, fill: currentColor }}
       dataSource={data}
-      xName="x"
+      xName="xval"
       yName="yval"
-      type={type}
+      type={(type)}
     >
       <Inject services={[SparklineTooltip]} />
     </SparklineComponent>
