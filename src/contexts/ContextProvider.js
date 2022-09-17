@@ -14,12 +14,20 @@ export const ContextProvider = ({ children }) => {
   
   const [isClicked, setisClicked] = useState(initialState)
 
+  const handleClick = (clicked) => {
+    setisClicked({
+      ...initialState,
+      [clicked]:true
+    })
+  }
+
   return (
     <StateContext.Provider
       value={{ 
         activeMenu, // if k/v pair has same name: don't need activeMenu: activeMenu
         setActiveMenu,
         isClicked,
+        handleClick,
       }}
     >
       {children}
